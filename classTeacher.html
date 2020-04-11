@@ -44,13 +44,13 @@
         <div class="container-classTeacher d-flex justify-content-center">
             <div class="wrap-classTeacher d-flex flex-column col-12 col-sm-10">
                 <!-- <button type="button" class="btn btn-primary">Create Class</button> -->
-                <!-- Button trigger modal -->
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                <!-- Button trigger modal Create Class-->
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#createClassCode">
                     Create Class
                 </button>
 
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <!-- Modal Create Class-->
+                <div class="modal fade" id="createClassCode" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered col-sm-10" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -82,8 +82,31 @@
                                 <!-- from create class -->
                             </div>
                             <div class="modal-footer justify-content-center">
-                                <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
-                                <button type="button" class="btn btn-primary create_save">Create Class</button>
+                                <!-- buttun create code -->
+                                <button type="button" class="btn btn-primary create_save" data-toggle="modal" data-target="#createClassSuccess">Create Class</button>
+
+                                <!-- Modal Show Code-->
+                                <div class="modal fade" id="createClassSuccess" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+                                            </div>
+
+                                            <!-- show code and complete -->
+                                            <div class="modal-body complete">
+                                                <img src="image/complete.svg" alt="">
+                                                <p>Create Class Success</p>
+                                                <div class="card-code d-flex justify-content-center col-9 col-sm-8">
+                                                    Code : 3843
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -70,7 +70,7 @@ p {
 }
 
 .create_save {
-    width: 40%;
+    width: 45%;
     padding: 1.5% 2%;
     margin-top: 0px;
 }
@@ -78,4 +78,32 @@ p {
 .form-control {
     border-radius: 30rem;
     /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
+}
+
+.complete {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.complete img {
+    width: 70%;
+}
+
+.complete p {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.card-code {
+    width: 80%;
+    font-size: 2em;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 10% 0;
+}
+
+.modal-footer>* {
+    margin: 0;
 }
