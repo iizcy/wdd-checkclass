@@ -68,3 +68,14 @@ html {
 p {
     margin-bottom: 0%;
 }
+
+.create_save {
+    width: 40%;
+    padding: 1.5% 2%;
+    margin-top: 0px;
+}
+
+.form-control {
+    border-radius: 30rem;
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
+}

@@ -7,7 +7,7 @@
     <title>Login-page</title>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="style/classTeacher.css">
 </head>
 
@@ -43,7 +43,52 @@
     <div class="limiter">
         <div class="container-classTeacher d-flex justify-content-center">
             <div class="wrap-classTeacher d-flex flex-column col-12 col-sm-10">
-                <button type="button" class="btn btn-primary">Create Class</button>
+                <!-- <button type="button" class="btn btn-primary">Create Class</button> -->
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                    Create Class
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered col-sm-10" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <!-- <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5> -->
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+                            </div>
+                            <div class="modal-body">
+                                <!-- from create class -->
+                                <form>
+                                    <div class="form-group">
+                                        <label for="formGroupExampleInput">Class Name</label>
+                                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="formGroupExampleInput">Subject ID</label>
+                                        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="formGroupExampleInput">Semester</label>
+                                        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="formGroupExampleInput">Year</label>
+                                        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="">
+                                    </div>
+                                </form>
+                                <!-- from create class -->
+                            </div>
+                            <div class="modal-footer justify-content-center">
+                                <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+                                <button type="button" class="btn btn-primary create_save">Create Class</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end modal -->
                 <div class="card text-center">
                     <div class="card-body d-flex flex-row justify-content-between align-items-end">
                         <p class="card-text class_s">Class 1</p>
