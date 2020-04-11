@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body,
+html {
+    width: auto;
+    background-color: #F6F6F6;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.container-signin {
+    width: 100%;
+    min-height: 90vh;
+}
+
+.wrap-signin {
+    width: 390px;
+    height: 90vh;
+    border-radius: 10px;
+    margin: 0% 10%;
+}
+
+h6 {
+    font-size: 1.5em;
+    margin-top: 10%;
+    font-weight: 800;
+    text-align: center;
+}
+
+.card {
+    height: 30%;
+    justify-content: center;
+    margin-top: 13%;
+    border: 0px;
+    border-radius: 2rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-text {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 900;
+    font-size: 2.5em;
+}
+
+.card-body {
+    flex: 0 0 auto;
+}
+
+.card-teacher {
+    width: 100%;
+    background-color: #fff;
+}
+
+.card-student {
+    width: 100%;
+    background-color: #fff;
+}
