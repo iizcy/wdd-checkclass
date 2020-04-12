@@ -1,13 +1,12 @@
 <template>
   <div id="app">
-    <nav-bar></nav-bar>
+    <nav-bar-teacher></nav-bar-teacher>
     <!-- <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>-->
-    <!-- <router-view /> -->
     <b-container class="bv-example-col d-flex justify-content-center">
-      <b-col  md="6">
+      <b-col md="6">
         <img src="../image_vue/logo.png" alt />
         <h6>IN-Class</h6>
         <div class="button">
@@ -15,6 +14,7 @@
         </div>
       </b-col>
     </b-container>
+    <router-view/>
   </div>
 </template>
 
@@ -22,7 +22,7 @@
 import NavBar_Teacher from "@/components/NavBar_Teacher.vue";
 export default {
   components: {
-    "nav-bar": NavBar_Teacher
+    "nav-bar-teacher": NavBar_Teacher
   }
 };
 </script>
@@ -68,8 +68,7 @@ h6 {
 
 .button {
   padding-top: 15%;
-    padding-bottom: 15%;
-
+  padding-bottom: 15%;
 }
 
 .btn-secondary {
@@ -82,7 +81,7 @@ h6 {
   border: none;
 }
 .col-11 {
-    flex: 0 0 91.666667%;
-    max-width: 100%;
+  flex: 0 0 91.666667%;
+  max-width: 100%;
 }
 </style>
