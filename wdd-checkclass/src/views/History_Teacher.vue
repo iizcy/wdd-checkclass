@@ -2,8 +2,7 @@
   <div>
     <div id="History_Teacher">
       <nav-bar-teacher></nav-bar-teacher>
-      <div class="container-History_Teacher">
-        <b-container class="bv-example-row">
+        <b-container class="container-History_Teacher">
           <b-row align-h="around">
             <b-col cols="4" class="c-left">
               <b-card style="max-width: 20rem; border-radius: 2rem;" class="mb-2">
@@ -27,7 +26,6 @@
           </b-row>
         </b-container>
       </div>
-    </div>
     <b-card class="card-history">
       <b-container class="bv-example-row">
         <b-row>
