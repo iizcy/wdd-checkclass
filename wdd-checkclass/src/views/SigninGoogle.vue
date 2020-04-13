@@ -10,7 +10,7 @@
         <img src="../../image_vue/logo.png" alt />
         <h6>IN-Class</h6>
         <div class="button">
-          <b-button>Sign in with Google</b-button>
+          <b-button @click="socialGoogleLogin">Sign in with Google</b-button>
         </div>
       </b-col>
     </b-container>
@@ -18,11 +18,39 @@
 </template>
 
 <script>
+import firebase from "firebase";
 import NavBar_Teacher from "@/components/NavBar_Teacher.vue";
 export default {
     name:"SigninGoogle",
+      data: function() {
+        return { email: "", password: "" };
+    },
   components: {
     "nav-bar-teacher": NavBar_Teacher
+  },
+  methods: {
+    socialGoogleLogin: function() {
+      const provide = new firebase.auth.GoogleAuthProvider().addScope("email");
+      firebase
+        .auth()
+        .signInWithPopup(provide)
+        .then(result => {
+          // create user in db
+          this.$router.replace('ChooseSignin')          
+          let obj = {
+            google_id: result.additionalUserInfo.profile.id,
+            fullname: result.additionalUserInfo.profile.name,
+            email: result.additionalUserInfo.profile.email,
+            profile_image: result.additionalUserInfo.profile.picture,
+            user_type_id: 1
+          };
+          console.log(obj);
+
+        })
+        .catch(err => {
+          alert("Oops. " + err.message);
+        });
+    }
   }
 };
 </script>
