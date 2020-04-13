@@ -6,6 +6,7 @@ import ClassTeacher from "../views/ClassTeacher.vue";
 import History_Teacher from "../views/History_Teacher.vue";
 import Topic_Student from "../views/Topic_Student.vue";
 import ScanQRcode from "../views/ScanQRcode.vue";
+import Interact from "../views/Interact.vue";
 
 Vue.use(VueRouter);
 
@@ -40,7 +41,11 @@ const routes = [
     name:"ScanQRcode",
     component: ScanQRcode
   },
-
+  {
+    path:"Interact",
+    name:"Interact",
+    component: Interact
+  },
 ];
 
 const router = new VueRouter({
