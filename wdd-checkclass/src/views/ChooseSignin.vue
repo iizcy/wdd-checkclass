@@ -1,5 +1,5 @@
 <template>
-  <div id="ChooseSigin">
+  <div id="ChooseSignin">
     <nav-bar-teacher></nav-bar-teacher>
     <div class="container-choose d-flex justify-content-center align-item-center">
       <div class="wrap-choose">

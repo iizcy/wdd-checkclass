@@ -1,7 +1,9 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import ChooseSignin from "../views/ChooseSignin.vue";
-import SigninGoogle from "../views/SigninGoogle"
+import SigninGoogle from "../views/SigninGoogle.vue";
+import ClassTeacher from "../views/ClassTeacher.vue";
+
 
 
 Vue.use(VueRouter);
@@ -16,6 +18,11 @@ const routes = [
     path:"/ChooseSignin",
     name:"ChooseSignin",
     component: ChooseSignin
+  },
+  {
+    path:"/ClassTeacher",
+    name:"ClassTeacher",
+    component: ClassTeacher
   }
 ];
 
