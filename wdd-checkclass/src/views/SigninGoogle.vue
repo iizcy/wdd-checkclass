@@ -55,7 +55,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 
 #SigninGoogle {
@@ -66,7 +66,7 @@ export default {
   color: #2c3e50;
 }
 
-// #nav {
+/* // #nav {
 //   padding: 30px;
 
 //   a {
@@ -77,7 +77,7 @@ export default {
 //       color: #42b983;
 //     }
 //   }
-// }
+// } */
 
 img {
   width: 70%;
@@ -112,4 +112,6 @@ h6 {
   flex: 0 0 91.666667%;
   max-width: 100%;
 }
+
+
 </style>
