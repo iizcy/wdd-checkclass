@@ -5,6 +5,7 @@ import SigninGoogle from "../views/SigninGoogle.vue";
 import ClassTeacher from "../views/ClassTeacher.vue";
 import History_Teacher from "../views/History_Teacher.vue";
 import Topic_Student from "../views/Topic_Student.vue";
+import Topic_Teacher from "../views/Topic_Teacher.vue";
 import ScanQRcode from "../views/ScanQRcode.vue";
 import Interact from "../views/Interact.vue";
 import ClassStudent from "../views/ClassStudent.vue";
@@ -36,6 +37,11 @@ const routes = [
     path:"/Topic_Student",
     name:"Topic_Student",
     component: Topic_Student
+  },
+  {
+    path:"/Topic_Teacher",
+    name:"Topic_Teacher",
+    component: Topic_Teacher
   },
   {
     path:"/ScanQRcode",

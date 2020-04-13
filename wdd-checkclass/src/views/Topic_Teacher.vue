@@ -1,11 +1,20 @@
 <template>
   <div id="Topic_Teacher">
-    <nav-bar-student></nav-bar-student>
-    <b-container class="container-TopicStudent d-flex flex-column justify-content-center">
-      <b-row align-h="center" class="wrap-TopicStudent d-flex flex-column">
+    <nav-bar-teacher></nav-bar-teacher>
+    <b-container class="container-TopicTeacher d-flex flex-column justify-content-center">
+      <b-row align-h="center" class="wrap-TopicTeacher d-flex flex-column">
         <!-- modal pop up create Topic-->
 
-        <b-button v-b-modal.modal-center>Scan QR</b-button>
+        <b-button v-b-modal.modal-center>Create Topic</b-button>
+        <div>
+          <b-modal id="modal-center" centered hide-footer>
+            <b-col class="form-group">
+              <label for="input-default">Topic Name</label>
+              <b-form-input id="input-default" placeholder></b-form-input>
+              <b-button>Create Topic</b-button>
+            </b-col>
+          </b-modal>
+        </div>
 
         <div class="box-card">
           <!-- card class code-->
@@ -27,11 +36,11 @@
 </template>
 
 <script>
-import NavBar_Student from "@/components/NavBar_Student.vue";
+import NavBar_Teacher from "@/components/NavBar_Teacher.vue";
 export default {
-  name: "TopicStudent",
+  name: "TopicTeacher",
   components: {
-    "nav-bar-student": NavBar_Student
+    "nav-bar-teacher": NavBar_Teacher
   }
 };
 </script>
@@ -43,16 +52,22 @@ export default {
   font-family: "Quicksand", sans-serif;
 }
 
-.container-TopicStudent {
+.container-TopicTeacher {
   width: 100%;
   /* min-height: 90vh; */
 }
 
-.wrap-TopicStudent {
+.wrap-TopicTeacher {
   /* width: 390px; */
   /* height: 90vh; */
   border-radius: 10px;
   margin: 0% 0%;
+}
+
+.form-group {
+  text-align: center;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 label {
@@ -81,12 +96,22 @@ label {
   flex: 0 0 auto;
 }
 
+.login-btn {
+  padding-top: 17%;
+}
+
 .btn {
   border-radius: 30rem;
   font-size: 1em;
   padding: 1.5% 6%;
   font-weight: 600;
   align-self: flex-end;
+}
+
+.btn-primary {
+  background-image: linear-gradient(90deg, #57aae7, #9af0f5);
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .btn-secondary {
@@ -105,6 +130,19 @@ p {
 .form-control {
   border-radius: 30rem;
   /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
+}
+
+.modal-body {
+  position: relative;
+  flex: 1 1 auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-footer > * {
+  margin: 0;
 }
 
 .box-card {
