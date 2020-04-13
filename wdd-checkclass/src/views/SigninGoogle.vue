@@ -7,7 +7,7 @@
     </div>-->
     <b-container class="bv-example-col d-flex justify-content-center">
       <b-col md="6">
-        <img src="../../image_vue/logo.png" alt />
+        <img src="../assets/logo_check.png" alt />
         <h6>IN-Class</h6>
         <div class="button">
           <b-button>Sign in with Google</b-button>
