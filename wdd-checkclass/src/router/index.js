@@ -3,8 +3,7 @@ import VueRouter from "vue-router";
 import ChooseSignin from "../views/ChooseSignin.vue";
 import SigninGoogle from "../views/SigninGoogle.vue";
 import ClassTeacher from "../views/ClassTeacher.vue";
-
-
+import History_Teacher from "../views/History_Teacher.vue";
 
 Vue.use(VueRouter);
 
@@ -23,7 +22,13 @@ const routes = [
     path:"/ClassTeacher",
     name:"ClassTeacher",
     component: ClassTeacher
-  }
+  },
+  {
+    path:"/History_Teacher",
+    name:"History_Teacher",
+    component: History_Teacher
+  },
+
 ];
 
 const router = new VueRouter({
