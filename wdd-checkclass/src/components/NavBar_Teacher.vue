@@ -43,7 +43,7 @@ export default {
 }
 
 .bg-info {
-    background-image: linear-gradient(90deg, #57aae7, #9af0f5) !important;
+    background-image: linear-gradient(90deg, #9af0f5 , #57aae7) !important;
 }
 
 .navbar-dark .navbar-toggler {

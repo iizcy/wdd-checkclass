@@ -93,7 +93,7 @@ label {
   /* width: 50%;
     height: 6%; */
   margin-top: 40px;
-  background-image: linear-gradient(90deg, #57aae7, #9af0f5);
+  background-image: linear-gradient(90deg, #9af0f5, #57aae7);
   border: none;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }

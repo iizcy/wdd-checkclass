@@ -104,7 +104,7 @@ h6 {
   border-radius: 30rem;
   font-size: 1.2em;
   font-weight: 600;
-  background-image: linear-gradient(90deg, #57aae7, #9af0f5);
+background-image: linear-gradient(90deg, #9af0f5, #57aae7);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border: none;
 }

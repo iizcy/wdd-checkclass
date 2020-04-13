@@ -3,7 +3,6 @@
     <nav-bar-student></nav-bar-student>
     <b-container class="container-classStudent d-flex flex-column justify-content-center">
       <b-row align-h="center" class="wrap-classStudent d-flex flex-column">
-
         <!-- modal pop up create code-->
         <b-button class="btn-creatClass_1" pill v-b-modal.modal-1>Join Class</b-button>
 
@@ -38,7 +37,6 @@ export default {
 </script>
 
 <style scoped>
-
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 
 #ClassStudent {
@@ -46,91 +44,90 @@ export default {
 }
 
 .container-classStudent {
-    width: 100%;
-    /* min-height: 90vh; */
+  width: 100%;
+  /* min-height: 90vh; */
 }
 
 .wrap-classStudent {
-    /* width: 390px; */
-    /* height: 90vh; */
-    border-radius: 10px;
-    margin: 0% 0%;
+  /* width: 390px; */
+  /* height: 90vh; */
+  border-radius: 10px;
+  margin: 0% 0%;
 }
 
 .card {
-    /* height: 15%;
+  /* height: 15%;
     width: 100%; */
-    height: 15vh;
-    justify-content: flex-end;
-    margin-top: 40px;
-    border: 0px;
-    border-radius: 2rem;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  height: 15vh;
+  justify-content: flex-end;
+  margin-top: 40px;
+  border: 0px;
+  border-radius: 2rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .card-text {
-    font-family: 'Quicksand', sans-serif;
-    font-weight: 900;
-    font-size: 90%;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 900;
+  font-size: 90%;
 }
 
 .card-body {
-    flex: 0 0 auto;
+  flex: 0 0 auto;
 }
 
 .login-btn {
-    padding-top: 17%;
+  padding-top: 17%;
 }
 
 .btn {
-    border-radius: 30rem;
-    font-size: 1em;
-    padding: 1.5% 6%;
-    font-weight: 600;
-    align-self: flex-end;
+  border-radius: 30rem;
+  font-size: 1em;
+  padding: 1.5% 6%;
+  font-weight: 600;
+  align-self: flex-end;
 }
 
-.btn-primary{
-    background-image: linear-gradient(90deg, #57aae7, #9af0f5);
-    border: none;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+.btn-primary {
+  background-image: linear-gradient(90deg, #9af0f5, #57aae7);
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-.btn-secondary{
-    /* width: 50%;
+.btn-secondary {
+  /* width: 50%;
     height: 6%; */
-    margin-top: 40px;
-    background-image: linear-gradient(90deg, #57aae7, #9af0f5);
-    border: none;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin-top: 40px;
+  background-image: linear-gradient(90deg, #9af0f5, #57aae7);
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 p {
-    margin-bottom: 0%;
+  margin-bottom: 0%;
 }
 
 .create_save {
-    width: 40%;
-    padding: 1.5% 2%;
-    margin-top: 0px;
+  width: 40%;
+  padding: 1.5% 2%;
+  margin-top: 0px;
 }
 
 .form-control {
-    border-radius: 30rem;
-    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
+  border-radius: 30rem;
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
 }
 
 .form-group {
-    text-align: center;
+  text-align: center;
 }
 
 label {
-    font-weight: 600;
-    font-size: 1.3em;
+  font-weight: 600;
+  font-size: 1.3em;
 }
 
-.modal-footer{
+.modal-footer {
   justify-content: center;
 }
-
 </style>

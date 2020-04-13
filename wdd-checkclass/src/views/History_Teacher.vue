@@ -2,30 +2,36 @@
   <div>
     <div id="History_Teacher">
       <nav-bar-teacher></nav-bar-teacher>
-        <b-container class="container-History_Teacher">
-          <b-row align-h="around">
-            <b-col cols="4" class="c-left">
-              <b-card style="max-width: 20rem; border-radius: 2rem;" class="mb-2">
-                <b-card-text>Status</b-card-text>
-                <div class="left">
-                <b-card-text><span class="dot" style="background-color: green;"></span> In Time</b-card-text><br>
-                <b-card-text><span class="dot" style="background-color: orange;"></span> Late</b-card-text><br>
-                <b-card-text><span class="dot" style="background-color: red;"></span> Absent</b-card-text><br>
-                </div>
-              </b-card>
-            </b-col>
-            <b-col cols="4" class="c-right">
-              <b-card
-                style="max-width: 20rem; border-radius: 2rem;"
-                class="mb-2"
-              >
-                <b-card-text>Qr Code</b-card-text>
-              </b-card>
-              <b-button href="#" variant="primary" class="btn-creatClass_2 center">Create Qr Code</b-button>
-            </b-col>
-          </b-row>
-        </b-container>
-      </div>
+      <b-container class="container-History_Teacher">
+        <b-row align-h="around">
+          <b-col cols="4" class="c-left">
+            <b-card style="max-width: 20rem; border-radius: 2rem;" class="mb-2">
+              <b-card-text>Status</b-card-text>
+              <div class="left">
+                <b-card-text>
+                  <span class="dot" style="background-color: green;"></span> In Time
+                </b-card-text>
+                <br />
+                <b-card-text>
+                  <span class="dot" style="background-color: orange;"></span> Late
+                </b-card-text>
+                <br />
+                <b-card-text>
+                  <span class="dot" style="background-color: red;"></span> Absent
+                </b-card-text>
+                <br />
+              </div>
+            </b-card>
+          </b-col>
+          <b-col cols="4" class="c-right">
+            <b-card style="max-width: 20rem; border-radius: 2rem;" class="mb-2">
+              <b-card-text>Qr Code</b-card-text>
+            </b-card>
+            <b-button href="#" variant="primary" class="btn-creatClass_2 center">Create Qr Code</b-button>
+          </b-col>
+        </b-row>
+      </b-container>
+    </div>
     <b-card class="card-history">
       <b-container class="bv-example-row">
         <b-row>
@@ -77,21 +83,20 @@ export default {
   border-radius: 50%;
   display: inline-block;
 }
-.btn-creatClass_2{
-    margin-top: 20px;
-    background-image: linear-gradient(90deg, #57aae7, #9af0f5);
-    border: none;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    border-radius: 2rem;
-    
+.btn-creatClass_2 {
+  margin-top: 20px;
+  background-image: linear-gradient(90deg, #9af0f5, #57aae7);
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 2rem;
 }
-.left{
+.left {
   justify-content: flex-start;
 }
-.c-left{
+.c-left {
   top: 20px;
 }
-.c-right{
+.c-right {
   top: 20px;
 }
 </style>
