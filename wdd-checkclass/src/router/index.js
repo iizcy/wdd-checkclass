@@ -4,6 +4,7 @@ import ChooseSignin from "../views/ChooseSignin.vue";
 import SigninGoogle from "../views/SigninGoogle.vue";
 import ClassTeacher from "../views/ClassTeacher.vue";
 import History_Teacher from "../views/History_Teacher.vue";
+import Topic_Student from "../views/Topic_Student";
 
 Vue.use(VueRouter);
 
@@ -28,6 +29,11 @@ const routes = [
     name:"History_Teacher",
     component: History_Teacher
   },
+  {
+    path:"/Topic_Student",
+    name:"Topic_Student",
+    component: Topic_Student
+  }
 
 ];
 
