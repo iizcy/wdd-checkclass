@@ -1,14 +1,10 @@
 <template>
   <div id="Interact">
     <nav-bar-student></nav-bar-student>
-    <b-container class="container-Interact">
-      <b-container class="bv-example-row">
-        <b-row align-h="start">
-          <b-col cols="2">
-            <b-button class="btn-creatClass_2">Back to Topic</b-button>
-          </b-col>
-        </b-row>
-      </b-container>
+    <b-container class="container-Interact d-flex flex-column justify-content-center">
+      <b-row align-h="center" class="wrap-Interact d-flex flex-column">
+        <b-button to="/ScanQRcode" class="btn-creatClass_1" pill v-b-modal.modal-multi-1>Back to Topic</b-button>
+      </b-row>
     </b-container>
   </div>
 </template>
@@ -33,11 +29,12 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
-.btn-creatClass_2 {
-  margin-top: 20px;
-  background-image: linear-gradient(90deg, #57aae7, #9af0f5);
+.btn-creatClass_1 {
+  margin: 5%;
+  align-self: flex-start;
   border: none;
+
+  background-image: linear-gradient(90deg, #57aae7, #9af0f5);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 2rem;
 }
 </style>

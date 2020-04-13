@@ -3,8 +3,7 @@
     <nav-bar-student></nav-bar-student>
     <b-container class="container-classTeacher d-flex flex-column justify-content-center">
       <b-row align-h="center" class="wrap-classTeacher d-flex flex-column">
-        <!-- modal pop up create code-->
-        <b-button class="btn-creatClass_1" pill v-b-modal.modal-multi-1>Create Class</b-button>
+        <b-button to="/ScanQRcode" class="btn-creatClass_1" pill v-b-modal.modal-multi-1>Scan Qr Code</b-button>
       </b-row>
     </b-container>
   </div>
@@ -16,7 +15,7 @@ export default {
   name: "Topic_Student",
   components: {
     "nav-bar-student": NavBar_Student
-  }
+  },
 };
 </script>
 
@@ -32,7 +31,7 @@ export default {
 }
 .btn-creatClass_1 {
   margin: 5%;
-  align-self: flex-end;
+  align-self: flex-start;
   border: none;
 
   background-image: linear-gradient(90deg, #57aae7, #9af0f5);
