@@ -1,11 +1,17 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import ChooseSignin from "../views/ChooseSignin.vue";
+import SigninGoogle from "../views/SigninGoogle"
 
 
 Vue.use(VueRouter);
 
 const routes = [
+  {
+    path:"/",
+    name:"SigninGoogle",
+    component: SigninGoogle
+  },
   {
     path:"/ChooseSignin",
     name:"ChooseSignin",
