@@ -48,12 +48,12 @@ const routes = [
     component: ScanQRcode
   },
   {
-    path:"Interact",
+    path:"/Interact",
     name:"Interact",
     component: Interact
   },
   {
-    path:"ClassStudent",
+    path:"/ClassStudent",
     name:"ClassStudent",
     component: ClassStudent
   },

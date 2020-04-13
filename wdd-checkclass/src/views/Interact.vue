@@ -1,9 +1,9 @@
 <template>
-  <div id="Topic_Student">
+  <div id="Interact">
     <nav-bar-student></nav-bar-student>
-    <b-container class="container-classTeacher d-flex flex-column justify-content-center">
-      <b-row align-h="center" class="wrap-classTeacher d-flex flex-column">
-        <b-button class="btn-creatClass_1" pill v-b-modal.modal-multi-1>Back to Topic</b-button>
+    <b-container class="container-Interact d-flex flex-column justify-content-center">
+      <b-row align-h="center" class="wrap-Interact d-flex flex-column">
+        <b-button to="/ScanQRcode" class="btn-creatClass_1" pill v-b-modal.modal-multi-1>Back to Topic</b-button>
       </b-row>
     </b-container>
   </div>
