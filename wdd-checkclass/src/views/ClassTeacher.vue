@@ -35,18 +35,18 @@
         <b-modal id="modal-multi-2" centered title hide-footer>
           <img src="../assets/complete.svg" alt />
           <p class="my-2">Create Class Success</p>
-          <b-card-text class="show-code d-flex justify-content-center">3256</b-card-text>
+          <p class="show-code d-flex justify-content-center">3256</p>
         </b-modal>
       </b-row>
 
       <!-- card class code-->
 
-      <b-card class="d-flex flex-row align-items-end">
-        <div class="d-flex flex-row justify-content-between">
-          <b-card-text>class 1</b-card-text>
-          <b-card-text>code : 2654</b-card-text>
+      <div class="card text-center">
+        <div class="card-body d-flex flex-row justify-content-between">
+          <p class="card-text class_s">Class 1</p>
+          <p class="card-text code">Code : 9877</p>
         </div>
-      </b-card>
+      </div>
     </b-container>
   </div>
 </template>
@@ -94,15 +94,13 @@ export default {
   align-self: center;
 }
 
-.modal-body {
-  position: relative;
-  flex: 1 1 auto;
-  padding: 1rem;
-  display: flex;
+/* .modal-body {
+  padding: 2rem;
   justify-content: center;
+  display: flex;
   flex-direction: column;
   align-items: center;
-}
+} */
 
 .my-2 {
   font-size: 1.2em;
@@ -123,18 +121,25 @@ img {
 }
 
 .card {
-  height: 15vh;
-  /* display: flex;
-  flex-direction: row;
-  justify-content: flex-end; */
-  font-size: 1.1em;
-  font-weight: 800;
-  border: none;
-  border-radius: 2rem;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    /* height: 15%;
+    width: 100%; */
+    height: 15vh;
+    justify-content: flex-end;
+    margin-top: 20px;
+    border: 0px;
+    border-radius: 2rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-/* .card-body{
-  padding: 1rem;
-} */
+.card-text {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 900;
+    font-size: 90%;
+}
+
+.card-body {
+    flex: 0 0 auto;
+    padding: 0% 5%;
+}
+
 </style>
