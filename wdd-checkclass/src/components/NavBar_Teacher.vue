@@ -9,7 +9,7 @@
       <!-- Right aligned nav items -->
       <b-navbar-nav class="ml-auto">
         <b-nav-item to="/">Class</b-nav-item>
-        <b-nav-item to="/">Logout</b-nav-item>
+        <b-nav-item @click="signout" type="submit">Logout</b-nav-item>
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
@@ -18,9 +18,20 @@
 
 
 <script>
+import firebase from "firebase";
 export default {
-
-}
+  name: "NavBar",
+  methods: {
+    signout() {
+       firebase
+       .auth()
+       .signOut()
+       .then(() => {
+         this.$router.replace("/");
+       });
+    }
+  }
+};
 </script>
 
 <style>
