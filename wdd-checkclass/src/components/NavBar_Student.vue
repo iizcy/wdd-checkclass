@@ -17,7 +17,7 @@
 </template>
 
 
-<script>
+<script sc>
 import firebase from "firebase";
 export default {
   name: "NavBar",

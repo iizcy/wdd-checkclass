@@ -33,6 +33,7 @@
         <!-- modal pop up show code-->
 
         <b-modal id="modal-multi-2" centered title hide-footer>
+          <div></div>
           <img src="../assets/complete.svg" alt />
           <p class="my-2">Create Class Success</p>
           <p class="show-code d-flex justify-content-center">3256</p>
@@ -68,56 +69,16 @@ export default {
   font-family: "Quicksand", sans-serif;
 }
 
-.form-group {
-  padding: 2% 0%;
-  margin-bottom: 0rem;
+.container-classTeacher {
+    width: 100%;
+    /* min-height: 90vh; */
 }
 
-.form-control {
-  border-radius: 30rem;
-}
-
-.btn-creatClass_1 {
-  margin: 5%;
-  align-self: flex-end;
-  border: none;
-
-  background-image: linear-gradient(90deg, #57aae7, #9af0f5);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
-
-.btn-creatClass_2 {
-  margin-top: 20px;
-  background-image: linear-gradient(90deg, #57aae7, #9af0f5);
-  border: none;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  align-self: center;
-}
-
-/* .modal-body {
-  padding: 2rem;
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-} */
-
-.my-2 {
-  font-size: 1.2em;
-  font-weight: 600;
-}
-
-img {
-  width: 75%;
-}
-
-.show-code {
-  width: 80%;
-  font-size: 2em;
-  border-radius: 1rem;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  border: none;
-  margin: 10% 0;
+.wrap-classTeacher {
+    /* width: 390px; */
+    /* height: 90vh; */
+    border-radius: 10px;
+    margin: 0% 0%;
 }
 
 .card {
@@ -125,7 +86,7 @@ img {
     width: 100%; */
     height: 15vh;
     justify-content: flex-end;
-    margin-top: 20px;
+    margin-top: 40px;
     border: 0px;
     border-radius: 2rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -139,7 +100,77 @@ img {
 
 .card-body {
     flex: 0 0 auto;
-    padding: 0% 5%;
 }
 
+.login-btn {
+    padding-top: 17%;
+}
+
+.btn {
+    border-radius: 30rem;
+    font-size: 1em;
+    padding: 1.5% 6%;
+    font-weight: 600;
+    align-self: flex-end;
+}
+
+.btn-secondary {
+    /* width: 50%;
+    height: 6%; */
+    margin-top: 40px;
+    background-image: linear-gradient(90deg, #57aae7, #9af0f5);
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.btn-creatClass_2{
+      margin-top: 2px;
+  background-image: linear-gradient(90deg, #57aae7, #9af0f5);
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+p {
+    margin-bottom: 0%;
+}
+
+.create_save {
+    width: 45%;
+    padding: 1.5% 2%;
+    margin-top: 0px;
+}
+
+.form-control {
+    border-radius: 30rem;
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
+}
+
+.modal-body {
+    position: relative;
+    flex: 1 1 auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-body img {
+    width: 70%;
+}
+
+.modal-body p {
+    font-weight: 600;
+}
+
+.show-code {
+    width: 80%;
+    font-size: 3em;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 10% 0;
+}
+
+.modal-footer>* {
+    margin: 0;
+}
 </style>
