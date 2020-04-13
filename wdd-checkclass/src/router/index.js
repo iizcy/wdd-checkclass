@@ -4,7 +4,7 @@ import ChooseSignin from "../views/ChooseSignin.vue";
 import SigninGoogle from "../views/SigninGoogle.vue";
 import ClassTeacher from "../views/ClassTeacher.vue";
 import History_Teacher from "../views/History_Teacher.vue";
-import Topic_Student from "../views/Topic_Student";
+import Topic_Student from "../views/Topic_Student.vue";
 
 Vue.use(VueRouter);
 
@@ -25,6 +25,11 @@ const routes = [
     component: ClassTeacher
   },
   {
+    path:"/ClassStudent",
+    name:"ClassStudent",
+    component: ClassStudent
+  },
+  {
     path:"/History_Teacher",
     name:"History_Teacher",
     component: History_Teacher
@@ -33,8 +38,17 @@ const routes = [
     path:"/Topic_Student",
     name:"Topic_Student",
     component: Topic_Student
-  }
-
+  },
+  {
+    path:"/ScanQRcode",
+    name:"ScanQRcode",
+    component: ScanQRcode
+  },
+  {
+    path:"Interact",
+    name:"Interact",
+    component: Interact
+  },
 ];
 
 const router = new VueRouter({
