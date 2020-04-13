@@ -8,6 +8,7 @@
 
 <script>
 import firebase from "firebase";
+//import { BootstrapVue, IconsPlugin } from "bootstrap-vue";
 export default {
   name: "HelloWorld",
   props: {
@@ -15,10 +16,15 @@ export default {
   },
   methods: {
     socialGoogleLogin: function() {
-      const provide = new firebase.auth.GoogleAuthProvider().addScope("email");
+      const provider = new firebase.auth.GoogleAuthProvider().addScope("email");
+      //provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
+      //firebase.auth().languageCode = 'us';
+      // provider.setCustomParameters({
+      //   'login_hint': "user@example.com"
+      // });
       firebase
         .auth()
-        .signInWithPopup(provide)
+        .signInWithPopup(provider)
         .then(result => {
           // create user in db
           let obj = {
