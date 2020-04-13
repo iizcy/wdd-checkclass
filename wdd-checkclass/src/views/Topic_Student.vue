@@ -3,7 +3,7 @@
     <nav-bar-student></nav-bar-student>
     <b-container class="container-classTeacher d-flex flex-column justify-content-center">
       <b-row align-h="center" class="wrap-classTeacher d-flex flex-column">
-        <b-button class="btn-creatClass_1" pill v-b-modal.modal-multi-1>Scan Qr Code</b-button>
+        <b-button to="/ScanQRcode" class="btn-creatClass_1" pill v-b-modal.modal-multi-1>Scan Qr Code</b-button>
       </b-row>
     </b-container>
   </div>
@@ -15,7 +15,7 @@ export default {
   name: "Topic_Student",
   components: {
     "nav-bar-student": NavBar_Student
-  }
+  },
 };
 </script>
 
