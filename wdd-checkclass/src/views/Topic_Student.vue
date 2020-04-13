@@ -1,25 +1,21 @@
 <template>
   <div id="Topic_Student">
-    <nav-bar-teacher></nav-bar-teacher>
-
-    <b-container class="container-Topic_Student">
-      <b-container class="bv-example-row">
-        <b-row align-h="start">
-          <b-col cols="2">
-            <b-button class="btn-creatClass_2">Scan QR</b-button>
-          </b-col>
-        </b-row>
-      </b-container>
+    <nav-bar-student></nav-bar-student>
+    <b-container class="container-classTeacher d-flex flex-column justify-content-center">
+      <b-row align-h="center" class="wrap-classTeacher d-flex flex-column">
+        <!-- modal pop up create code-->
+        <b-button class="btn-creatClass_1" pill v-b-modal.modal-multi-1>Create Class</b-button>
+      </b-row>
     </b-container>
   </div>
 </template>
 
 <script>
-import NavBar_Teacher from "@/components/NavBar_Student.vue";
+import NavBar_Student from "@/components/NavBar_Student.vue";
 export default {
   name: "Topic_Student",
   components: {
-    "nav-bar-teacher": NavBar_Teacher
+    "nav-bar-student": NavBar_Student
   }
 };
 </script>
@@ -34,11 +30,12 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
-.btn-creatClass_2 {
-  margin-top: 20px;
-  background-image: linear-gradient(90deg, #57aae7, #9af0f5);
+.btn-creatClass_1 {
+  margin: 5%;
+  align-self: flex-end;
   border: none;
+
+  background-image: linear-gradient(90deg, #57aae7, #9af0f5);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 2rem;
 }
 </style>

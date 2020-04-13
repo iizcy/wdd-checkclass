@@ -7,6 +7,7 @@ import History_Teacher from "../views/History_Teacher.vue";
 import Topic_Student from "../views/Topic_Student.vue";
 import ScanQRcode from "../views/ScanQRcode.vue";
 import Interact from "../views/Interact.vue";
+import ClassStudent from "../views/ClassStudent.vue";
 
 Vue.use(VueRouter);
 
@@ -50,6 +51,11 @@ const routes = [
     path:"Interact",
     name:"Interact",
     component: Interact
+  },
+  {
+    path:"ClassStudent",
+    name:"ClassStudent",
+    component: ClassStudent
   },
 ];
 
