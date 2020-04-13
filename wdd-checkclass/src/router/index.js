@@ -28,11 +28,6 @@ const routes = [
     component: ClassTeacher
   },
   {
-    path:"/ClassStudent",
-    name:"ClassStudent",
-    component: ClassStudent
-  },
-  {
     path:"/History_Teacher",
     name:"History_Teacher",
     component: History_Teacher
@@ -48,12 +43,12 @@ const routes = [
     component: ScanQRcode
   },
   {
-    path:"Interact",
+    path:"/Interact",
     name:"Interact",
     component: Interact
   },
   {
-    path:"ClassStudent",
+    path:"/ClassStudent",
     name:"ClassStudent",
     component: ClassStudent
   },
