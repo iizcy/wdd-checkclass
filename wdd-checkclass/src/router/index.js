@@ -9,6 +9,7 @@ import Topic_Teacher from "../views/Topic_Teacher.vue";
 import ScanQRcode from "../views/ScanQRcode.vue";
 import Interact from "../views/Interact.vue";
 import ClassStudent from "../views/ClassStudent.vue";
+import testQR from "../views/testQR.vue";
 
 Vue.use(VueRouter);
 
@@ -58,6 +59,11 @@ const routes = [
     name:"ClassStudent",
     component: ClassStudent
   },
+  {
+    path:"/testQR",
+    name:"testQR",
+    component: testQR
+  }
 ];
 
 const router = new VueRouter({
