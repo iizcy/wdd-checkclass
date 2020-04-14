@@ -2,22 +2,12 @@
   <div id="ClassTeacher">
     <nav-bar-teacher></nav-bar-teacher>
 
-    <b-container
-      class="container-classTeacher d-flex flex-column justify-content-center"
-    >
+    <b-container class="container-classTeacher d-flex flex-column justify-content-center">
       <b-row align-h="center" class="wrap-classTeacher d-flex flex-column">
         <!-- modal pop up create code-->
-        <b-button class="btn-creatClass_1" pill v-b-modal.modal-multi-1
-          >Create Class</b-button
-        >
+        <b-button class="btn-creatClass_1" pill v-b-modal.modal-multi-1>Create Class</b-button>
 
-        <b-modal
-          id="modal-multi-1"
-          centered
-          size="lg"
-          title="Create Class"
-          hide-footer
-        >
+        <b-modal id="modal-multi-1" centered size="lg" title="Create Class" hide-footer>
           <b-col class="form-group">
             <label for="input-default">Class Name</label>
             <b-form-input id="input-default" placeholder></b-form-input>
@@ -37,18 +27,17 @@
             <label for="input-default">Year</label>
             <b-form-input id="input-default" placeholder></b-form-input>
           </b-col>
-          <b-button class="btn-creatClass_2" pill v-b-modal.modal-multi-2
-            >Create Class</b-button
-          >
+          <b-button class="btn-creatClass_2" pill v-b-modal.modal-multi-2>Create Class</b-button>
         </b-modal>
 
         <!-- modal pop up show code-->
 
-        <b-modal id="modal-multi-2" centered title hide-footer>
-          <div></div>
-          <img src="../assets/complete.svg" alt />
-          <p class="my-2">Create Class Success</p>
-          <p class="show-code d-flex justify-content-center">3256</p>
+        <b-modal id="modal-multi-2" centered hide-footer>
+          <b-col class="show-complete">
+            <img src="../assets/complete.svg" />
+            <p class="my-2">Create Class Success</p>
+            <p class="show-code d-flex justify-content-center">3256</p>
+          </b-col>
         </b-modal>
       </b-row>
 
@@ -65,7 +54,7 @@
 </template>
 
 <script>
-import router from '../router';
+import router from "../router";
 import NavBar_Teacher from "@/components/NavBar_Teacher.vue";
 export default {
   name: "ClassTeacher",
@@ -170,6 +159,13 @@ p {
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+
+.show-complete {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .modal-body img {
