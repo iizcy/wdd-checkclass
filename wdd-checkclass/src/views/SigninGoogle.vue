@@ -45,6 +45,9 @@ export default {
             user_type_id: 1
           };
           console.log(obj);
+          var firebaseRef = firebase.database().ref("User");
+          firebaseRef.push(obj);
+          alert("Add user complete");
         })
         .catch(err => {
           alert("Oops. " + err.message);
