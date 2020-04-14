@@ -19,7 +19,7 @@
 
 <script>
 import firebase from "firebase";
-import NavBar_Teacher from "@/components/NavBar_Teacher.vue";
+// import NavBar_SignIn from "@/components/NavBar_SignIn.vue";
 export default {
   name: "SigninGoogle",
   data: function() {

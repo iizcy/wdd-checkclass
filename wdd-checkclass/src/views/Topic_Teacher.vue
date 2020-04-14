@@ -18,7 +18,7 @@
           </b-modal>
         </div>
 
-        <div class="box-card">
+        <div class="box-card" style="cursor: pointer;" v-on:click="navigate()">
           <!-- card class code-->
           <div class="card text-center">
             <div class="card-body d-flex flex-row justify-content-between">
@@ -38,11 +38,17 @@
 </template>
 
 <script>
+import router from '../router';
 import NavBar_Teacher from "@/components/NavBar_Teacher.vue";
 export default {
   name: "TopicTeacher",
   components: {
     "nav-bar-teacher": NavBar_Teacher
+  },
+  methods: {
+    navigate() {
+      router.push({ name: "History_Teacher" });
+    }
   }
 };
 </script>
