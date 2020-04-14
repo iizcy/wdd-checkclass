@@ -21,10 +21,10 @@
 import firebase from "firebase";
 import NavBar_Teacher from "@/components/NavBar_Teacher.vue";
 export default {
-    name:"SigninGoogle",
-      data: function() {
-        return { email: "", password: "" };
-    },
+  name: "SigninGoogle",
+  data: function() {
+    return { email: "", password: "" };
+  },
   components: {
     "nav-bar-teacher": NavBar_Teacher
   },
@@ -36,7 +36,7 @@ export default {
         .signInWithPopup(provide)
         .then(result => {
           // create user in db
-          this.$router.replace('ChooseSignin')          
+          this.$router.replace("ChooseSignin");
           let obj = {
             google_id: result.additionalUserInfo.profile.id,
             fullname: result.additionalUserInfo.profile.name,
@@ -45,7 +45,9 @@ export default {
             user_type_id: 1
           };
           console.log(obj);
-
+          var firebaseRef = firebase.database().ref("User");
+          firebaseRef.push(obj);
+          alert("Add user complete");
         })
         .catch(err => {
           alert("Oops. " + err.message);
@@ -65,7 +67,6 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
-
 
 /* // #nav {
 //   padding: 30px;
@@ -105,7 +106,7 @@ h6 {
   border-radius: 30rem;
   font-size: 1.2em;
   font-weight: 600;
-background-image: linear-gradient(90deg, #9af0f5, #57aae7);
+  background-image: linear-gradient(90deg, #9af0f5, #57aae7);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border: none;
 }
@@ -113,6 +114,4 @@ background-image: linear-gradient(90deg, #9af0f5, #57aae7);
   flex: 0 0 91.666667%;
   max-width: 100%;
 }
-
-
 </style>

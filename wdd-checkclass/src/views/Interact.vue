@@ -1,7 +1,9 @@
 <template>
   <div id="Interact">
     <nav-bar-student></nav-bar-student>
-    <b-container class="container-Interact d-flex flex-column justify-content-center">
+    <b-container
+      class="container-Interact d-flex flex-column justify-content-center"
+    >
       <b-row align-h="center" class="wrap-Interact d-flex flex-column">
         <b-col class="d-flex flex-column justify-content-center">
           <b-button to="/ScanQRcode" class="btn-creatClass_1" pill>Back to Topic</b-button>

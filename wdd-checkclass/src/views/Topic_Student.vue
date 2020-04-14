@@ -1,7 +1,9 @@
 <template>
   <div id="Topic_Teacher">
     <nav-bar-student></nav-bar-student>
-    <b-container class="container-TopicStudent d-flex flex-column justify-content-center">
+    <b-container
+      class="container-TopicStudent d-flex flex-column justify-content-center"
+    >
       <b-row align-h="center" class="wrap-TopicStudent d-flex flex-column">
         <!-- modal pop up create Topic-->
 
@@ -42,7 +44,6 @@ export default {
 #Topic_Teacher {
   font-family: "Quicksand", sans-serif;
 }
-
 
 .container-TopicStudent {
   width: 100%;

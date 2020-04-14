@@ -1,10 +1,14 @@
 <template>
   <div id="ScanQRcode">
     <nav-bar-student></nav-bar-student>
-    <b-container class="container-ScanQRcode d-flex flex-column justify-content-center">
+    <b-container
+      class="container-ScanQRcode d-flex flex-column justify-content-center"
+    >
       <b-row align-h="center" class="wrap-ScanQRcode d-flex flex-column">
         <b-col>
-          <b-button to="/Topic_Student" class="btn-creatClass_1" pill>Back to Topic</b-button>
+          <b-button to="/Topic_Student" class="btn-creatClass_1" pill
+            >Back to Topic</b-button
+          >
           <div>
             <!-- <p class="error">{{ error }}</p>
             <p class="decode-result">
@@ -131,9 +135,9 @@ export default {
 }
 
 .card-text:last-child {
-    margin-bottom: 0;
-    margin: 30px;
-    font-size: 1.5em;
-    font-weight: 600;
+  margin-bottom: 0;
+  margin: 30px;
+  font-size: 1.5em;
+  font-weight: 600;
 }
 </style>

@@ -1,5 +1,5 @@
 import "@babel/polyfill";
-import firebase from 'firebase';
+import firebase from "firebase";
 import "mutationobserver-shim";
 import Vue from "vue";
 import "./plugins/bootstrap-vue";
@@ -14,7 +14,7 @@ const firebaseConfig = {
   databaseURL: "https://wdd-classattend.firebaseio.com",
   projectId: "wdd-classattend",
   storageBucket: "wdd-classattend.appspot.com",
-  messagingSenderId: "326742755496",
+  messagingSenderId: "326742755496"
 };
 firebase.initializeApp(firebaseConfig);
 

@@ -9,15 +9,18 @@
               <b-card-text>Status</b-card-text>
               <div class="left">
                 <b-card-text>
-                  <span class="dot" style="background-color: green;"></span> In Time
+                  <span class="dot" style="background-color: green;"></span> In
+                  Time
                 </b-card-text>
                 <br />
                 <b-card-text>
-                  <span class="dot" style="background-color: orange;"></span> Late
+                  <span class="dot" style="background-color: orange;"></span>
+                  Late
                 </b-card-text>
                 <br />
                 <b-card-text>
-                  <span class="dot" style="background-color: red;"></span> Absent
+                  <span class="dot" style="background-color: red;"></span>
+                  Absent
                 </b-card-text>
                 <br />
               </div>
@@ -27,7 +30,9 @@
             <b-card style="max-width: 20rem; border-radius: 2rem;" class="mb-2">
               <b-card-text>Qr Code</b-card-text>
             </b-card>
-            <b-button href="#" variant="primary" class="btn-creatClass_2 center">Create Qr Code</b-button>
+            <b-button href="#" variant="primary" class="btn-creatClass_2 center"
+              >Create Qr Code</b-button
+            >
           </b-col>
         </b-row>
       </b-container>
@@ -65,7 +70,6 @@ export default {
   color: #2c3e50;
   background-color: #2c3e50;
 }
-
 
 .container-History_Teacher {
   height: 50vh;

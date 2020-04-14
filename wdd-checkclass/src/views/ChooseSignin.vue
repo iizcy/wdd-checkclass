@@ -1,13 +1,15 @@
 <template>
   <div id="ChooseSignin">
     <nav-bar-teacher></nav-bar-teacher>
-    <div class="container-choose d-flex justify-content-center align-item-center">
+    <div
+      class="container-choose d-flex justify-content-center align-item-center"
+    >
       <div class="wrap-choose">
         <h6>Sign-in</h6>
-        <b-card>
+        <b-card style="cursor: pointer;" v-on:click="navigate()">
           <b-card-text>Teacher</b-card-text>
         </b-card>
-        <b-card>
+        <b-card style="cursor: pointer;" v-on:click="navigate2()">
           <b-card-text>Student</b-card-text>
         </b-card>
       </div>
@@ -16,15 +18,23 @@
 </template>
 
 <script>
+import router from '../router';
 import NavBar_Teacher from "@/components/NavBar_Teacher.vue";
 export default {
   name: "ChooseSignin",
   components: {
     "nav-bar-teacher": NavBar_Teacher
+  },
+  methods: {
+    navigate() {
+      router.push({ name: "ClassTeacher" });
+    },
+    navigate2() {
+      router.push({ name: "ClassStudent" });
+    }
   }
 };
 </script>
-
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
@@ -62,10 +72,9 @@ h6 {
   margin-top: 13%;
   font-weight: 800;
   text-align: center;
-
 }
 
 .card-body {
-    flex: 0 0 auto;
+  flex: 0 0 auto;
 }
 </style>

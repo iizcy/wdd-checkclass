@@ -1,10 +1,14 @@
 <template>
   <div id="ClassStudent">
     <nav-bar-student></nav-bar-student>
-    <b-container class="container-classStudent d-flex flex-column justify-content-center">
+    <b-container
+      class="container-classStudent d-flex flex-column justify-content-center"
+    >
       <b-row align-h="center" class="wrap-classStudent d-flex flex-column">
         <!-- modal pop up create code-->
-        <b-button class="btn-creatClass_1" pill v-b-modal.modal-1>Join Class</b-button>
+        <b-button class="btn-creatClass_1" pill v-b-modal.modal-1
+          >Join Class</b-button
+        >
 
         <b-modal id="modal-1" centered size="lg" ok-only>
           <b-col class="form-group">
@@ -16,7 +20,7 @@
 
       <!-- card class code-->
 
-      <div class="card text-center">
+      <div class="card text-center" style="cursor: pointer;" v-on:click="navigate()">
         <div class="card-body d-flex flex-row justify-content-between">
           <p class="card-text class_s">Class 1</p>
           <p class="card-text code">Code : 9877</p>
@@ -27,11 +31,17 @@
 </template>
 
 <script>
+import router from '../router';
 import NavBar_Student from "@/components/NavBar_Student.vue";
 export default {
   name: "ClassStudent",
   components: {
     "nav-bar-student": NavBar_Student
+  },
+  methods: {
+    navigate() {
+      router.push({ name: "Topic_Student" });
+    }
   }
 };
 </script>
@@ -46,7 +56,7 @@ export default {
 .container-classStudent {
   width: 100%;
   /* min-height: 90vh; */
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
 }
 
 .wrap-classStudent {
