@@ -5,10 +5,12 @@
       class="container-TopicTeacher d-flex flex-column justify-content-center"
     >
       <b-row align-h="center" class="wrap-TopicTeacher d-flex flex-column">
+      
         <!-- modal pop up create Topic-->
 
         <b-button v-b-modal.modal-center>Create Topic</b-button>
-        <div>
+
+        <div class="d-flex flex-column justify-content-center">
           <b-modal id="modal-center" centered hide-footer>
             <b-col class="form-group">
               <label for="input-default">Topic Name</label>
@@ -140,14 +142,14 @@ p {
   /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
 }
 
-.modal-body {
+/* .modal-body {
   position: relative;
   flex: 1 1 auto;
   padding: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
+} */
 
 .modal-footer > * {
   margin: 0;
