@@ -1,8 +1,23 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-
-    <button @click="socialGoogleLogin">Google</button>
+  <div class="container col-md-6" id="comment">
+    <h2>Online Comment</h2>
+    <!-- display comment -->
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">{{ messageText }}</h5>
+        <p class="card-text text-muted">{{ name }}</p>
+      </div>
+    </div>
+    <hr />
+    <!-- form design -->
+    <form class="form-group" @submit.prevent="storeMessage">
+      <div>
+        <textarea name="name" class="form-control"></textarea>
+      </div>
+      <label for="">Name: </label><br />
+      <input type="text" class="form-control" /><br />
+      <button type="button" class="btn btn-primary">Comment</button>
+    </form>
   </div>
 </template>
 
@@ -10,12 +25,12 @@
 import firebase from "firebase";
 //import { BootstrapVue, IconsPlugin } from "bootstrap-vue";
 export default {
-  name: "HelloWorld",
+  name: "Comment",
   props: {
     msg: String
   },
   methods: {
-    socialGoogleLogin: function() {
+    comment: function() {
       const provider = new firebase.auth.GoogleAuthProvider().addScope("email");
       //provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
       //firebase.auth().languageCode = 'us';
@@ -42,8 +57,15 @@ export default {
     }
   }
 };
+var comment = new Vue({
+  el: "#comment",
+  data: {
+    messageText: "",
+    message: [],
+    name: "Print"
+  }
+});
 </script>
-
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 h3 {

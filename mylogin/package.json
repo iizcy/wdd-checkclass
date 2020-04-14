@@ -9,10 +9,14 @@
   },
   "dependencies": {
     "bootstrap": "^4.4.1",
+    "bootstrap-sass": "^3.4.1",
     "bootstrap-vue": "^2.11.0",
     "core-js": "^3.6.4",
     "firebase": "^7.14.0",
+    "qrcode.vue": "^1.7.0",
     "vue": "^2.6.11",
+    "vue-comment-grid": "^1.0.12",
+    "vue-qrcode-component": "^2.1.1",
     "vue-router": "^3.1.6"
   },
   "devDependencies": {
