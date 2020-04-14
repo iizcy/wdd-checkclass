@@ -5,7 +5,7 @@
       <b-row align-h="center" class="wrap-TopicStudent d-flex flex-column">
         <!-- modal pop up create Topic-->
 
-        <b-button v-b-modal.modal-center>Scan QR</b-button>
+        <b-button  to="/ScanQRcode" v-b-modal.modal-center>Scan QR</b-button>
 
         <div class="box-card">
           <!-- card class code-->

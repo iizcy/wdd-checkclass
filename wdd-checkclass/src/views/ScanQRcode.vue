@@ -97,12 +97,13 @@ export default {
   flex-direction: column;
   align-items: center;
 }
+
 .btn {
   border-radius: 30rem;
   font-size: 1em;
   padding: 1.5% 6%;
   font-weight: 600;
-  align-self: flex-end;
+  align-self: flex-start;
 }
 
 .btn-secondary {

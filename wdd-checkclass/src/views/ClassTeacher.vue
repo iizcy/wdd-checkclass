@@ -67,7 +67,6 @@ export default {
 
 #ClassTeacher {
   font-family: "Quicksand", sans-serif;
-
 }
 
 .container-classTeacher {
@@ -151,8 +150,8 @@ p {
   flex: 1 1 auto;
   padding: 1rem;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
 }
 
 .modal-body img {
