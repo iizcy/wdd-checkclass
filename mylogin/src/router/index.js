@@ -2,15 +2,16 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 // import Home from "../views/Home.vue";
 import Login from "../views/Login.vue";
-import GoogleLogin from "../components/HelloWorld.vue";
+//import Comment from "../components/Comment.vue";
+import QR from "@/components/QR.vue";
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: "/",
-    name: "HelloWorld",
-    component: GoogleLogin
+    name: "QR",
+    component: QR
   },
   {
     path: "/about",
@@ -25,7 +26,7 @@ const routes = [
     path: "/login",
     name: "login",
     component: Login
-  },
+  }
 ];
 
 const router = new VueRouter({
