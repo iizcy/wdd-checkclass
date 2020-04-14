@@ -29,6 +29,8 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
+
+
 .btn-creatClass_1 {
   margin: 5%;
   align-self: flex-start;

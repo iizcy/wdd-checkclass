@@ -43,6 +43,7 @@ export default {
   font-family: "Quicksand", sans-serif;
 }
 
+
 .container-TopicStudent {
   width: 100%;
   /* min-height: 90vh; */

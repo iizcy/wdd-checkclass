@@ -67,6 +67,7 @@ export default {
 
 #ClassTeacher {
   font-family: "Quicksand", sans-serif;
+
 }
 
 .container-classTeacher {

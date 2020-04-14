@@ -20,7 +20,10 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+}
 
+body{
+  background-color: #f6f6f6;
 }
 
 

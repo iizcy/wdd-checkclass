@@ -46,6 +46,7 @@ export default {
 .container-classStudent {
   width: 100%;
   /* min-height: 90vh; */
+  background-color: #F6F6F6;
 }
 
 .wrap-classStudent {
