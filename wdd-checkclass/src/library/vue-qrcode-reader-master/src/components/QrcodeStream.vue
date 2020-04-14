@@ -296,7 +296,8 @@ export default {
   height: 100%;
 }
 
-.overlay, .tracking-layer {
+.overlay,
+.tracking-layer {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -304,7 +305,8 @@ export default {
   left: 0;
 }
 
-.camera, .pause-frame {
+.camera,
+.pause-frame {
   display: block;
   object-fit: cover;
   width: 100%;

@@ -1,7 +1,9 @@
 <template>
   <div id="Topic_Teacher">
     <nav-bar-teacher></nav-bar-teacher>
-    <b-container class="container-TopicTeacher d-flex flex-column justify-content-center">
+    <b-container
+      class="container-TopicTeacher d-flex flex-column justify-content-center"
+    >
       <b-row align-h="center" class="wrap-TopicTeacher d-flex flex-column">
         <!-- modal pop up create Topic-->
 
@@ -109,7 +111,7 @@ label {
 }
 
 .btn-primary {
- background-image: linear-gradient(90deg, #9af0f5, #57aae7);
+  background-image: linear-gradient(90deg, #9af0f5, #57aae7);
   border: none;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }

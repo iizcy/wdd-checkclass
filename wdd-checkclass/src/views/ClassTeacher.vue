@@ -2,12 +2,22 @@
   <div id="ClassTeacher">
     <nav-bar-teacher></nav-bar-teacher>
 
-    <b-container class="container-classTeacher d-flex flex-column justify-content-center">
+    <b-container
+      class="container-classTeacher d-flex flex-column justify-content-center"
+    >
       <b-row align-h="center" class="wrap-classTeacher d-flex flex-column">
         <!-- modal pop up create code-->
-        <b-button class="btn-creatClass_1" pill v-b-modal.modal-multi-1>Create Class</b-button>
+        <b-button class="btn-creatClass_1" pill v-b-modal.modal-multi-1
+          >Create Class</b-button
+        >
 
-        <b-modal id="modal-multi-1" centered size="lg" title="Create Class" hide-footer>
+        <b-modal
+          id="modal-multi-1"
+          centered
+          size="lg"
+          title="Create Class"
+          hide-footer
+        >
           <b-col class="form-group">
             <label for="input-default">Class Name</label>
             <b-form-input id="input-default" placeholder></b-form-input>
@@ -27,7 +37,9 @@
             <label for="input-default">Year</label>
             <b-form-input id="input-default" placeholder></b-form-input>
           </b-col>
-          <b-button class="btn-creatClass_2" pill v-b-modal.modal-multi-2>Create Class</b-button>
+          <b-button class="btn-creatClass_2" pill v-b-modal.modal-multi-2
+            >Create Class</b-button
+          >
         </b-modal>
 
         <!-- modal pop up show code-->
@@ -42,7 +54,7 @@
 
       <!-- card class code-->
 
-      <div class="card text-center">
+      <div class="card text-center" style="cursor: pointer;" v-on:click="navigate()">
         <div class="card-body d-flex flex-row justify-content-between">
           <p class="card-text class_s">Class 1</p>
           <p class="card-text code">Code : 9877</p>
@@ -53,11 +65,17 @@
 </template>
 
 <script>
+import router from '../router';
 import NavBar_Teacher from "@/components/NavBar_Teacher.vue";
 export default {
   name: "ClassTeacher",
   components: {
     "nav-bar-teacher": NavBar_Teacher
+  },
+  methods: {
+    navigate() {
+      router.push({ name: "Topic_Teacher" });
+    }
   }
 };
 </script>
@@ -67,7 +85,6 @@ export default {
 
 #ClassTeacher {
   font-family: "Quicksand", sans-serif;
-
 }
 
 .container-classTeacher {

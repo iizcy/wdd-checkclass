@@ -15,53 +15,53 @@ Vue.use(VueRouter);
 
 const routes = [
   {
-    path:"/",
-    name:"SigninGoogle",
+    path: "/",
+    name: "SigninGoogle",
     component: SigninGoogle
   },
   {
-    path:"/ChooseSignin",
-    name:"ChooseSignin",
+    path: "/ChooseSignin",
+    name: "ChooseSignin",
     component: ChooseSignin
   },
   {
-    path:"/ClassTeacher",
-    name:"ClassTeacher",
+    path: "/ClassTeacher",
+    name: "ClassTeacher",
     component: ClassTeacher
   },
   {
-    path:"/History_Teacher",
-    name:"History_Teacher",
+    path: "/History_Teacher",
+    name: "History_Teacher",
     component: History_Teacher
   },
   {
-    path:"/Topic_Student",
-    name:"Topic_Student",
+    path: "/Topic_Student",
+    name: "Topic_Student",
     component: Topic_Student
   },
   {
-    path:"/Topic_Teacher",
-    name:"Topic_Teacher",
+    path: "/Topic_Teacher",
+    name: "Topic_Teacher",
     component: Topic_Teacher
   },
   {
-    path:"/ScanQRcode",
-    name:"ScanQRcode",
+    path: "/ScanQRcode",
+    name: "ScanQRcode",
     component: ScanQRcode
   },
   {
-    path:"/Interact",
-    name:"Interact",
+    path: "/Interact",
+    name: "Interact",
     component: Interact
   },
   {
-    path:"/ClassStudent",
-    name:"ClassStudent",
+    path: "/ClassStudent",
+    name: "ClassStudent",
     component: ClassStudent
   },
   {
-    path:"/testQR",
-    name:"testQR",
+    path: "/testQR",
+    name: "testQR",
     component: testQR
   }
 ];
