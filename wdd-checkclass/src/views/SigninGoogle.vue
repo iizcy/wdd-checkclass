@@ -26,7 +26,7 @@ export default {
     return { email: "", password: "" };
   },
   components: {
-    "nav-bar-teacher": NavBar_Teacher
+    // "nav-bar-teacher": NavBar_SignIn
   },
   methods: {
     socialGoogleLogin: function() {
