@@ -1,5 +1,0 @@
-- System design: use case diagram
-- Database Design
-- UI Design
-- Firebase
-- [Backend] Feature:
