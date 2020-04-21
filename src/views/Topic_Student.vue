@@ -1,26 +1,47 @@
 <template>
-  <div id="Topic_Teacher">
+  <div id="Topic_Student">
     <nav-bar-student></nav-bar-student>
     <b-container
       class="container-TopicStudent d-flex flex-column justify-content-center"
     >
       <b-row align-h="center" class="wrap-TopicStudent d-flex flex-column">
         <!-- modal pop up create Topic-->
+        <router-link
+          :to="{ name: 'ScanQRcode', params: { id: id } }"
+          class="btn-box"
+          ><b-button v-b-modal.modal-center>Scan QR</b-button></router-link
+        >
 
-        <b-button  to="/ScanQRcode" v-b-modal.modal-center>Scan QR</b-button>
+        <div
+          class="card-body-nametopic d-flex flex-column justify-content-center mt-3"
+        >
+          <p class="code-class">
+            Semester {{ classData.Semester }}/ {{ classData.Year }}
+            {{ classData.Subject_ID }}
+          </p>
+          <p class="name-class">{{ classData.Class_Name }}</p>
+        </div>
 
-        <div class="box-card">
-          <!-- card class code-->
-          <div class="card text-center">
-            <div class="card-body d-flex flex-row justify-content-between">
-              <p class="card-text class_s">week 1</p>
-              <p class="card-text code">Code : 9877</p>
+        <!-- card class code-->
+        <div
+          class="card text-center"
+          style="cursor: pointer;"
+          v-for="(item, index) in times"
+          :key="index"
+        >
+          <div class="card-body-check d-flex flex-row justify-content-between">
+            <p class="date">{{ moment(item.time) }}</p>
+            <div class="status d-flex flex-row justify-content-center">
+              <p>
+                status
+              </p>
+              <b-icon
+                icon="circle-fill"
+                style="color: green;"
+                v-if="!item.late"
+              ></b-icon>
+              <b-icon icon="circle-fill" style="color: yellow;" v-else></b-icon>
             </div>
-          </div>
-
-          <!-- comment -->
-          <div class="text-comment">
-            <p>very good</p>
           </div>
         </div>
       </b-row>
@@ -30,10 +51,52 @@
 
 <script>
 import NavBar_Student from "@/components/NavBar_Student.vue";
+import { firestore } from "../library/firebase";
+import { mapGetters } from "vuex";
+import moment from "moment";
 export default {
   name: "TopicStudent",
+  data() {
+    return {
+      id: this.$route.params.id,
+      classData: {},
+      times: []
+    };
+  },
+  created() {
+    this.fetchData();
+  },
   components: {
     "nav-bar-student": NavBar_Student
+  },
+  computed: {
+    // map `this.user` to `this.$store.getters.user`
+    ...mapGetters({
+      user: "user"
+    })
+  },
+  methods: {
+    moment(date) {
+      return moment(date).format("DD/MM/YYYY HH:mm:ss");
+    },
+    fetchData() {
+      let classDoc = firestore.collection("Class").doc(this.id);
+      classDoc.get().then(doc => {
+        let time = doc.data().time;
+        this.classData = doc.data();
+        let times = [];
+        Object.keys(time).forEach(date => {
+          classDoc
+            .collection(date)
+            .doc(this.user.data.uid)
+            .get()
+            .then(res => {
+              times.push(res.data());
+              this.times = times;
+            });
+        });
+      });
+    }
   }
 };
 </script>
@@ -41,8 +104,14 @@ export default {
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 
-#Topic_Teacher {
+#Topic_Student {
   font-family: "Quicksand", sans-serif;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 }
 
 .container-TopicStudent {
@@ -64,23 +133,36 @@ label {
 .card {
   /* height: 15%;
     width: 100%; */
-  width: 100%;
-  height: 15vh;
-  justify-content: flex-end;
+  /* height: 15vh; */
   margin-top: 40px;
   border: 0px;
   border-radius: 2rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  font-family: "Quicksand", sans-serif;
 }
 
-.card-text {
-  font-family: "Quicksand", sans-serif;
+.code-class {
+  font-weight: 600;
+  font-size: 1em;
+}
+
+.name-class {
   font-weight: 900;
-  font-size: 90%;
+  font-size: 1.2em;
+}
+.card-body-check {
+  padding: 20px 20px;
+  font-size: 1em;
+  font-weight: 600;
 }
 
 .card-body {
   flex: 0 0 auto;
+}
+
+.btn-box {
+  width: 100%;
+  text-align: right;
 }
 
 .btn {
@@ -129,5 +211,12 @@ p {
   font-size: 1em;
   color: white;
   margin-top: -8px;
+}
+
+.status {
+  align-items: center;
+}
+.status p {
+  padding: 0% 10px;
 }
 </style>

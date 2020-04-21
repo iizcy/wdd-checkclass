@@ -1,14 +1,18 @@
 <template>
   <div>
     <b-navbar toggleable="lg" type="dark" variant="info">
-      <b-navbar-brand href="#"></b-navbar-brand>
+      <router-link to="/ChooseSignin">
+        <b-navbar-brand><img src="../assets/plan.png" alt/></b-navbar-brand>
+      </router-link>
 
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
       <b-collapse id="nav-collapse" is-nav>
         <!-- Right aligned nav items -->
         <b-navbar-nav class="ml-auto">
-          <b-nav-item to="/">Class</b-nav-item>
+          <router-link :to="{ name: 'ClassStudent' }" class="nav-link"
+            >Class</router-link
+          >
           <b-nav-item @click="signout" type="submit">Logout</b-nav-item>
         </b-navbar-nav>
       </b-collapse>
@@ -21,13 +25,14 @@ import firebase from "firebase";
 export default {
   name: "NavBar",
   methods: {
+    Class() {
+      this.$router.replace("ClassStudent");
+    },
+    Home() {
+      this.$router.replace("ChooseSignin");
+    },
     signout() {
-      firebase
-        .auth()
-        .signOut()
-        .then(() => {
-          this.$router.replace("/");
-        });
+      firebase.auth().signOut();
     }
   }
 };

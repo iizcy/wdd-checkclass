@@ -1,16 +1,14 @@
 <template>
   <div id="SigninGoogle">
-    <nav-bar-teacher></nav-bar-teacher>
-    <!-- <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>-->
     <b-container class="bv-example-col d-flex justify-content-center">
       <b-col md="6">
         <img src="../assets/logo_check.png" alt />
         <h6>IN-Class</h6>
         <div class="button">
-          <b-button @click="socialGoogleLogin">Sign in with Google</b-button>
+          <b-button @click="socialGoogleLogin"
+            ><img style="width:7%;" src="../assets/Vector.png" alt /> Sign in
+            with Google</b-button
+          >
         </div>
       </b-col>
     </b-container>
@@ -18,7 +16,7 @@
 </template>
 
 <script>
-import firebase from "firebase";
+import { auth, firebase, firestore } from "../library/firebase";
 // import NavBar_SignIn from "@/components/NavBar_SignIn.vue";
 export default {
   name: "SigninGoogle",
@@ -31,12 +29,10 @@ export default {
   methods: {
     socialGoogleLogin: function() {
       const provide = new firebase.auth.GoogleAuthProvider().addScope("email");
-      firebase
-        .auth()
+      auth
         .signInWithPopup(provide)
         .then(result => {
           // create user in db
-          this.$router.replace("ChooseSignin");
           let obj = {
             google_id: result.additionalUserInfo.profile.id,
             fullname: result.additionalUserInfo.profile.name,
@@ -44,10 +40,29 @@ export default {
             profile_image: result.additionalUserInfo.profile.picture,
             user_type_id: 1
           };
-          console.log(obj);
-          var firebaseRef = firebase.database().ref("User");
-          firebaseRef.push(obj);
-          alert("Add user complete");
+          // console.log(obj);
+          firebase
+            .database()
+            .ref("User")
+            .child(result.user.uid)
+            .set(obj);
+
+          let user = firestore.collection("User").doc(result.user.uid);
+          user
+            .get()
+            .then(res => {
+              if (!res.exists) {
+                user.set(obj);
+              } else {
+                user.update(obj);
+              }
+              alert("Add user complete");
+            })
+            .catch(err => {
+              if (err == "permission-denied") {
+                this.$router.replace("/error");
+              }
+            });
         })
         .catch(err => {
           alert("Oops. " + err.message);
@@ -66,6 +81,12 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 }
 
 /* // #nav {

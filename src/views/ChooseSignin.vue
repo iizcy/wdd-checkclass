@@ -5,12 +5,12 @@
       class="container-choose d-flex justify-content-center align-item-center"
     >
       <div class="wrap-choose">
-        <h6>Sign-in</h6>
+        <h6>Welcome [{{ user.data.displayName }}]</h6>
         <b-card style="cursor: pointer;" v-on:click="navigate()">
-          <b-card-text>Teacher</b-card-text>
+          <b-card-text>Create</b-card-text>
         </b-card>
         <b-card style="cursor: pointer;" v-on:click="navigate2()">
-          <b-card-text>Student</b-card-text>
+          <b-card-text>Join</b-card-text>
         </b-card>
       </div>
     </div>
@@ -18,12 +18,19 @@
 </template>
 
 <script>
-import router from '../router';
+import router from "../router";
 import NavBar_Teacher from "@/components/NavBar_Teacher.vue";
+import { mapGetters } from "vuex";
 export default {
   name: "ChooseSignin",
   components: {
     "nav-bar-teacher": NavBar_Teacher
+  },
+  computed: {
+    // map `this.user` to `this.$store.getters.user`
+    ...mapGetters({
+      user: "user"
+    })
   },
   methods: {
     navigate() {
@@ -41,6 +48,12 @@ export default {
 
 #ChooseSigin {
   font-family: "Quicksand", sans-serif;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 }
 
 .container-choose {

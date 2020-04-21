@@ -6,7 +6,26 @@
 
 <script>
 export default {
-  name: "app"
+  name: "app",
+  data() {
+    return {
+      isKmitl: null,
+      modal: false
+    };
+  }
+  // created() {
+  //   if (!this.user.data) return;
+  //   firestore
+  //     .collection("Class")
+  //     .get()
+  //     .then()
+  //     .catch(err => {
+  //       if (err.code == "permission-denied") {
+  //         this.isKmitl = false;
+  //         this.modal = true;
+  //       }
+  //     });
+  // }
 };
 </script>
 
